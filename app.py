@@ -21,6 +21,10 @@ from dotenv import load_dotenv
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+load_dotenv()  # Load .env file
+
+api_key = os.getenv("API_KEY")
+
 # Constants
 DB_PATH = "knowledge_base.db"
 SIMILARITY_THRESHOLD = 0.50  # Lowered threshold for better recall
